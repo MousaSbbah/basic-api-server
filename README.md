@@ -24,8 +24,27 @@ This is the Main Pull Request for this project :
 
 **https://github.com/MousaSbbah/basic-api-server/pull/1**
 
+## Setup
+   .env requirements
+     `PORT` - 3030
+## Running the app
+```
+npm start
+```
+Endpoint: 
+* `/student`
+* `/animal`
 
+## Tests
+Github actions link :**https://github.com/MousaSbbah/basic-api-server/actions**
 
+**Unit Tests:**
+```
+npm run test
+```
+
+## 
+    
 ## UML
 <img src='./UML.png' style='background-color:rgb(224, 224, 224)'>
 
