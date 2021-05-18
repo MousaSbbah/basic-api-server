@@ -1,21 +1,19 @@
 'use strict';
 const uuid = require('uuid').v4;
 
-/**
- * @param  {} {this.db=[];}read(id
- * @param  {} {if(id
- * @param  {} {returnthis.db.find((val
- * @param  {} =>val.id===id
- * @param  {} ;}else{returnthis.db;}}creat(data
- * @param  {uuid(} {letnewAnimal={id
- */
+
 class Animal {
 
 
   constructor() {
     this.db = [];
   }
-
+  /**
+   * @param  {String} id
+   * @param  {String} {if(id
+   * @param  {Object} {returnthis.db.find((val
+   * @param  {Array} =>val.id===id
+   */
   read(id){
     if(id){
       return this.db.find((val) => val.id === id);
@@ -23,14 +21,25 @@ class Animal {
       return this.db;
     }
   }
+  /**
+   * @param  {object} data
+   * @param  {uuid(} {letnewAnimal={id
+   */
   creat(data){
     let newAnimal = {
       id : uuid(),
       data : data
     }
+    /**
+     * @param  {object} newAnimal
+     */
     this.db.push(newAnimal);
     return newAnimal
   }
+  /**
+   * @param  {String} id
+   * @param  {Object} data
+   */
   update(id , data){
     for (let i = 0; i < this.db.length; i++) {
       if(this.db[i].id === id ){
@@ -41,6 +50,10 @@ class Animal {
     }
 
   }
+  /**
+   * @param  {String} id
+   * @param  {Array} {this.db=this.db.filter(val=>(val.id!==id
+   */
   delete(id){
     this.db= this.db.filter(val=>(val.id !== id));
     return this.db ;
